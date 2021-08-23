@@ -1,0 +1,165 @@
+/* Mobile first approach is used
+* media query is used to apply the css changes according to screen size
+* if screen size is less than 960 px then mobile css will be apply or if the screen size is more
+* then media query css(desktop css) will apply
+*/
+
+
+/**********************top level css********************************/
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+/**********************header css********************************/
+
+.shuffle-sort-app .shuffle-sort-app__app-header {
+    background-color: #333333;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0 0 16px 0;
+    padding: 8px 0;
+    font-weight: 500;
+}
+
+
+/**********************app content css********************************/
+
+.shuffle-sort-app .shuffle-sort-app__content {
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+
+/**********************Action buttons css********************************/
+
+.shuffle-sort-app .shuffle-sort-app__actions {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.shuffle-sort-app .shuffle-sort-app__btn {
+    margin: 0 4px;
+    background-color: #72c3dc;
+    border-radius: 4px;
+    border-color: unset;
+    border: 1px solid #72c3dc;
+    color: #ffffff;
+    padding: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 1px 3px 3px 0 #2b8ead;
+}
+
+.shuffle-sort-app .shuffle-sort-app__btn:active {
+    border-color: #2b8ead;
+}
+
+
+/**********************cards css********************************/
+
+.shuffle-sort-app .shuffle-sort-app__cards {
+    color: #000000;
+}
+
+.shuffle-sort-app .shuffle-sort-app__card {
+    display: flex;
+    background-color: #efefef;
+    margin-bottom: 4px;
+}
+
+.shuffle-sort-app .shuffle-sort-app__card-color {
+    width: 5%;
+}
+
+.shuffle-sort-app .shuffle-sort-app__card-mobile {
+    width: 95%;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.shuffle-sort-app .shuffle-sort-app__card-number {
+    display: none;
+}
+
+
+/**********************Author details css********************************/
+
+.shuffle-sort-app .shuffle-sort-app__author {
+    text-align: center;
+    font-style: italic;
+    padding: 16px 0;
+}
+
+
+/******************Media query for screen width more than 960px********************************/
+
+@media (min-width:960px) {
+    /**********************desktop header css********************************/
+    .shuffle-sort-app .shuffle-sort-app__app-header {
+        background-color: unset;
+        color: #000000;
+        margin-bottom: 0;
+    }
+    /**********************desktop content css********************************/
+    .shuffle-sort-app .shuffle-sort-app__content {
+        flex-direction: row-reverse;
+        background-color: #efefef;
+        border-top: 4px solid #bfbfbf;
+    }
+    /**********************desktop Action buttons css********************************/
+    .shuffle-sort-app .shuffle-sort-app__actions {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        margin: 32px;
+    }
+    .shuffle-sort-app .shuffle-sort-app__btn {
+        margin-top: 16px;
+    }
+    /**********************desktop cards css********************************/
+    .shuffle-sort-app .shuffle-sort-app__cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        color: #ffffff;
+    }
+    .shuffle-sort-app .shuffle-sort-app__card-container {
+        width: 33.33%;
+        height: 180px;
+    }
+    .shuffle-sort-app .shuffle-sort-app__card {
+        display: block;
+        margin: 0;
+        height: 100%;
+    }
+    .shuffle-sort-app .shuffle-sort-app__card-color,
+    .shuffle-sort-app__card-mobile {
+        display: none;
+    }
+    .shuffle-sort-app .shuffle-sort-app__card-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        font-size: 60px;
+    }
+    /**********************desktop Author details css********************************/
+    .shuffle-sort-app .shuffle-sort-app__author {
+        background-color: #efefef;
+        margin: 0 16px;
+    }
+}
